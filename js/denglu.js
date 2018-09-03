@@ -1,0 +1,33 @@
+$(function(){
+	$('.head1>li,.nav>span,.qq1,.qq3,.for3,.foot1>li').mouseenter(function(){
+		$(this).css({color:'#f00',textDecoration:'underline'});
+	}).mouseleave(function(){
+		$(this).css({color:'',textDecoration:'none'});
+	})
+	$('.botl').mouseenter(function(){
+		$('.erwei').animate({marginLeft:'20px'},300);
+	}).mouseleave(function(){
+		$('.erwei').animate({marginLeft:'95px'},300); 
+	})
+	$('.middle>li').mouseenter(function(){
+		$(this).css({color:'#e4393c',fontWeight:'bold'});
+	}).mouseleave(function(){
+		$(this).css({color:'',fontWeight:''});
+	})
+	$('.middle>li').click(function(){
+		$(this).addClass('middle1').siblings().removeClass('middle1');
+		var index=$(this).index();
+		$('.bottom>div').eq(index).show().siblings().hide(); 
+	})
+	// 表单验证
+	$('.fora>input').focus(function(){
+		$('.fora>i').css('background','#ddd');
+	}).blur(function(){
+		$('.fora>i').css('background','#eee');
+	})
+	$('.forb>input').focus(function(){
+		$('.forb>i').css('background','#ddd');
+	}).blur(function(){
+		$('.forb>i').css('background','#eee');
+	})	
+}) 
